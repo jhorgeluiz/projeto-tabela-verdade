@@ -3,7 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Tabela Verdade</title>
+    
     <style>
         form {
             display: inline-block;
@@ -19,7 +20,7 @@
             background-color: cadetblue;
             height: 230px;
             border-radius: 10px;
-            
+            margin-bottom: 10px;
         }
         .label1,.label2,.label3,.label4  {
             display: inline-block;
@@ -79,7 +80,7 @@
         }
         .PQ {
             position: relative;
-            left: 165px;
+            left: 160px;
             margin: 0px;
         }
 
@@ -114,7 +115,75 @@
             <input class="limpar" type="submit" value="Limpar" onclick="limpar()">
         </div>
     </section>
+
+    <!-- 88888888888888888888888888888888 -->
+    <section>
+        <form class="form1" autocomplete="off">
+            <h3> <p class="P">P</p> <p class="Q">Q</p> <p class="PQ">P \/ Q</p> </h3>
+            <h1 class="label1">V</h1><h1 class="label1">V</h1><input class="input1" type="text"id="campo2_1"><br>
+            <h1 class="label2">V</h1><h1 class="label2">F</h1><input class="input2" type="text"id="campo2_2"> <br>
+            <h1 class="label3">F</h1><h1 class="label3">V</h1><input class="input3" type="text"id="campo2_3"><br>
+            <h1 class="label4">F</h1><h1 class="label4">F</h1><input class="input4" type="text"id="campo2_4">
+        </form>
+        <div>
+            <input class="verificar" type="button" value="Verificar" onclick="verificar2()">
+            <input class="limpar" type="submit" value="Limpar" onclick="limpar2()">
+        </div>
+    </section>
+
+
+    <!-- 88888888888888888888888888888888 -->
+    <section>
+        <form class="form1" autocomplete="off">
+            <h3> <p class="P">P</p> <p class="Q">Q</p> <p class="PQ">P <u>\/</u> Q</p> </h3>
+            <h1 class="label1">V</h1><h1 class="label1">V</h1><input class="input1" type="text"id="campo3_1"><br>
+            <h1 class="label2">V</h1><h1 class="label2">F</h1><input class="input2" type="text"id="campo3_2"> <br>
+            <h1 class="label3">F</h1><h1 class="label3">V</h1><input class="input3" type="text"id="campo3_3"><br>
+            <h1 class="label4">F</h1><h1 class="label4">F</h1><input class="input4" type="text"id="campo3_4">
+        </form>
+        <div>
+            <input class="verificar" type="button" value="Verificar" onclick="verificar3()">
+            <input class="limpar" type="submit" value="Limpar" onclick="limpar3()">
+        </div>
+    </section>
+
+
+    <!-- 88888888888888888888888888888888 -->
+    <section>
+        <form class="form1" autocomplete="off">
+            <h3> <p class="P">P</p> <p class="Q">Q</p> <p class="PQ">P → Q</p> </h3>
+            <h1 class="label1">V</h1><h1 class="label1">V</h1><input class="input1" type="text"id="campo4_1"><br>
+            <h1 class="label2">V</h1><h1 class="label2">F</h1><input class="input2" type="text"id="campo4_2"> <br>
+            <h1 class="label3">F</h1><h1 class="label3">V</h1><input class="input3" type="text"id="campo4_3"><br>
+            <h1 class="label4">F</h1><h1 class="label4">F</h1><input class="input4" type="text"id="campo4_4">
+        </form>
+        <div>
+            <input class="verificar" type="button" value="Verificar" onclick="verificar4()">
+            <input class="limpar" type="submit" value="Limpar" onclick="limpar4()">
+        </div>
+    </section>
+
+
+    <!-- 88888888888888888888888888888888 -->
+    <section>
+        <form class="form1" autocomplete="off">
+            <h3> <p class="P">P</p> <p class="Q">Q</p> <p class="PQ">P &#x2194; Q</p> </h3>
+            <h1 class="label1">V</h1><h1 class="label1">V</h1><input class="input1" type="text"id="campo5_1"><br>
+            <h1 class="label2">V</h1><h1 class="label2">F</h1><input class="input2" type="text"id="campo5_2"> <br>
+            <h1 class="label3">F</h1><h1 class="label3">V</h1><input class="input3" type="text"id="campo5_3"><br>
+            <h1 class="label4">F</h1><h1 class="label4">F</h1><input class="input4" type="text"id="campo5_4">
+        </form> 
+        <div>
+            <input class="verificar" type="button" value="Verificar" onclick="verificar5()">
+            <input class="limpar" type="submit" value="Limpar" onclick="limpar5()">
+        </div>
+    </section>
     
+
+
+
+
+
 
     <script>
         function verificar() {
@@ -165,6 +234,161 @@
                 campo2.style.background = ''
                 campo3.style.background = ''
                 campo4.style.background = ''
+            }
+        }
+
+
+        function verificar3() {
+            let campo3A = document.getElementById('campo3_1').value
+            let campo3B = document.getElementById('campo3_2').value
+            let campo3C = document.getElementById('campo3_3').value
+            let campo3D = document.getElementById('campo3_4').value
+            let V = 'V'
+            let v = 'v'
+            let f = 'f'
+            let F = 'F'
+            if (campo3A == F || campo3A == f) {
+                campo3_1.style.background = '#83E509'
+            } else {
+                campo3_1.style.background = 'red'
+            }
+
+            if (campo3B == V || campo3B == v) {
+                campo3_2.style.background = '#83E509'
+            } else {
+                campo3_2.style.background = 'red'
+            }
+
+            if (campo3C == V || campo3C == v) {
+                campo3_3.style.background = '#83E509'
+            } else {
+                campo3_3.style.background = 'red'
+            }
+
+            if (campo3D == F || campo3D == f) {
+                campo3_4.style.background = '#83E509'
+            } else {
+                campo3_4.style.background = 'red'
+            }
+        }
+
+        function limpar3() {
+            let limp3A = document.getElementById('campo3_1').value = ''
+            let limp3B = document.getElementById('campo3_2').value = ''
+            let limp3C = document.getElementById('campo3_3').value = ''
+            let limp3D = document.getElementById('campo3_4').value = ''
+            if (limp3A == 0 || limp3B == 0 || limp3C == 0 || limp3D == 0) {
+                limp3A.innerHTML = ''
+                limp3B.innerHTML = ''
+                limp3C.innerHTML = ''
+                limp3D.innerHTML = ''
+                campo3_1.style.background = ''
+                campo3_2.style.background = ''
+                campo3_3.style.background = ''
+                campo3_4.style.background = ''
+            }
+        }
+
+        function verificar4() {
+            let campo4A = document.getElementById('campo4_1').value
+            let campo4B = document.getElementById('campo4_2').value
+            let campo4C = document.getElementById('campo4_3').value
+            let campo4D = document.getElementById('campo4_4').value
+            let V = 'V'
+            let v = 'v'
+            let f = 'f'
+            let F = 'F'
+            if (campo4A == V || campo4A == v) {
+                campo4_1.style.background = '#83E509'
+            } else {
+                campo4_1.style.background = 'red'
+            }
+
+            if (campo4B == F || campo4B == f) {
+                campo4_2.style.background = '#83E509'
+            } else {
+                campo4_2.style.background = 'red'
+            }
+
+            if (campo4C == V || campo4C == v) {
+                campo4_3.style.background = '#83E509'
+            } else {
+                campo4_3.style.background = 'red'
+            }
+
+            if (campo4D == V || campo4D == v) {
+                campo4_4.style.background = '#83E509'
+            } else {
+                campo4_4.style.background = 'red'
+            }
+        }
+
+        function limpar4() {
+            let limp4A = document.getElementById('campo4_1').value = ''
+            let limp4B = document.getElementById('campo4_2').value = ''
+            let limp4C = document.getElementById('campo4_3').value = ''
+            let limp4D = document.getElementById('campo4_4').value = ''
+            if (limp4A == 0 || limp4B == 0 || limp4C == 0 || limp4D == 0) {
+                limp4A.innerHTML = ''
+                limp4B.innerHTML = ''
+                limp4C.innerHTML = ''
+                limp4D.innerHTML = ''
+                campo4_1.style.background = ''
+                campo4_2.style.background = ''
+                campo4_3.style.background = ''
+                campo4_4.style.background = ''
+            }
+        }
+
+
+        function verificar5() {
+            let campo5A = document.getElementById('campo5_1').value
+            let campo5B = document.getElementById('campo5_2').value
+            let campo5C = document.getElementById('campo5_3').value
+            let campo5D = document.getElementById('campo5_4').value
+            let V = 'V'
+            let v = 'v'
+            let f = 'f'
+            let F = 'F'
+            if (campo5A == V || campo5A == v) {
+                campo5_1.style.background = '#83E509'
+            } else {
+                campo5_1.style.background = 'red'
+            }
+
+            if (campo5B == F || campo5B == f) {
+                campo5_2.style.background = '#83E509'
+            } else {
+                campo5_2.style.background = 'red'
+            }
+
+            if (campo5C == F || campo5C == f) {
+                campo5_3.style.background = '#83E509'
+            } else {
+                campo5_3.style.background = 'red'
+            }
+
+            if (campo5D == V || campo5D == v) {
+                campo5_4.style.background = '#83E509'
+            } else {
+                campo5_4.style.background = 'red'
+            }
+        }
+
+        function limpar5() {
+            let limp5A = document.getElementById('campo5_1').value = ''
+            let limp5B = document.getElementById('campo5_2').value = ''
+            let limp5C = document.getElementById('campo5_3').value = ''
+            let limp5D = document.getElementById('campo5_4').value = ''
+            if (limp5A == 0 || limp5B == 0 || limp5C == 0 || limp5D == 0) {
+                limp5A.innerHTML = ''
+                limp5B.innerHTML = ''
+                limp5C.innerHTML = ''
+                limp5D.innerHTML = ''
+                campo5_1.style.background = ''
+                campo5_2.style.background = ''
+                campo5_3.style.background = ''
+                campo5_4.style.background = ''
             }
         }
     </script>

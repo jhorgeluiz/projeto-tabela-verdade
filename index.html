@@ -179,12 +179,6 @@
         </div>
     </section>
     
-
-
-
-
-
-
     <script>
         function verificar() {
             let campoA = document.getElementById('campo1').value
@@ -234,6 +228,58 @@
                 campo2.style.background = ''
                 campo3.style.background = ''
                 campo4.style.background = ''
+            }
+        }
+
+
+        function verificar2() {
+            let campo2A = document.getElementById('campo2_1').value
+            let campo2B = document.getElementById('campo2_2').value
+            let campo2C = document.getElementById('campo2_3').value
+            let campo2D = document.getElementById('campo2_4').value
+            let V = 'V'
+            let v = 'v'
+            let f = 'f'
+            let F = 'F'
+            if (campo2A == V || campo2A == v) {
+                campo2_1.style.background = '#83E509'
+            } else {
+                campo2_1.style.background = 'red'
+            }
+
+            if (campo2B == V || campo2B == v) {
+                campo2_2.style.background = '#83E509'
+            } else {
+                campo2_2.style.background = 'red'
+            }
+
+            if (campo2C == V || campo2C == v) {
+                campo2_3.style.background = '#83E509'
+            } else {
+                campo2_3.style.background = 'red'
+            }
+
+            if (campo2D == F || campo2D == f) {
+                campo2_4.style.background = '#83E509'
+            } else {
+                campo2_4.style.background = 'red'
+            }
+        }
+
+        function limpar2() {
+            let limp2A = document.getElementById('campo2_1').value = ''
+            let limp2B = document.getElementById('campo2_2').value = ''
+            let limp2C = document.getElementById('campo2_3').value = ''
+            let limp2D = document.getElementById('campo2_4').value = ''
+            if (limp2A == 0 || limp2B == 0 || limp2C == 0 || limp2D == 0) {
+                limp2A.innerHTML = ''
+                limp2B.innerHTML = ''
+                limp2C.innerHTML = ''
+                limp2D.innerHTML = ''
+                campo2_1.style.background = ''
+                campo2_2.style.background = ''
+                campo2_3.style.background = ''
+                campo2_4.style.background = ''
             }
         }
 

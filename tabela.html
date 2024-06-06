@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        form {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            position: relative;
+            top: 5px;
+            left: 50px;
+            border: 5px solid gray;
+        }
+
+        section {
+            background-color: cadetblue;
+            height: 230px;
+            border-radius: 10px;
+            
+        }
+        .label1,.label2,.label3,.label4  {
+            display: inline-block;
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 20px;
+            border: 1px solid;
+            width: 80px;
+            height: 30px;
+            position: relative;
+            margin: 0px;
+        }
+        
+        .input1,.input2,.input3,.input4 {
+            background-color: rgb(182, 178, 178);
+            border: 1px solid white;
+            text-align: center;
+            /* text-transform: uppercase; */
+            font-size: larger;
+            margin: 0px;
+            width: 80px;
+            height: 27.5px;
+        }
+        .input1 {
+            position: relative;
+            top: 3.1px;
+        }
+        .input2 {
+            position: relative;
+            top: 2.8px;
+        }
+        .input3 {
+            position: relative;
+            top: 2.8px;
+        }
+        .input4 {
+            position: relative;
+            top: 2.9px;
+        }
+
+        h3 {
+            
+            display: flex;
+            margin: 0px;
+        }
+        .P {
+            font-size: 20px;
+            position: relative;
+            left: 40px;
+            margin: 0px;
+        }
+        .Q {
+            position: relative;
+            left: 105px;
+            margin: 0px;
+        }
+        .PQ {
+            position: relative;
+            left: 165px;
+            margin: 0px;
+        }
+
+        div {
+            display: flex;
+            justify-content: center;
+            position: relative;
+            top: 10px;
+        }
+        .verificar {
+            border-radius: 10px;
+            margin-right: 10px;
+            padding: 8px;
+        }
+        .limpar {
+            border-radius: 10px;
+            padding: 8px;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <form class="form1" autocomplete="off">
+            <h3> <p class="P">P</p> <p class="Q">Q</p> <p class="PQ">P/\Q</p> </h3>
+            <h1 class="label1">V</h1><h1 class="label1">V</h1><input class="input1" type="text"id="campo1"><br>
+            <h1 class="label2">V</h1><h1 class="label2">F</h1><input class="input2" type="text"id="campo2"> <br>
+            <h1 class="label3">F</h1><h1 class="label3">V</h1><input class="input3" type="text"id="campo3"><br>
+            <h1 class="label4">F</h1><h1 class="label4">F</h1><input class="input4" type="text"id="campo4">
+        </form>
+        <div>
+            <input class="verificar" type="button" value="Verificar" onclick="verificar()">
+            <input class="limpar" type="submit" value="Limpar" onclick="limpar()">
+        </div>
+    </section>
+    
+
+    <script>
+        function verificar() {
+            let campoA = document.getElementById('campo1').value
+            let campoB = document.getElementById('campo2').value
+            let campoC = document.getElementById('campo3').value
+            let campoD = document.getElementById('campo4').value
+            let V = 'V'
+            let v = 'v'
+            let f = 'f'
+            let F = 'F'
+            if (campoA == V || campoA == v) {
+                campo1.style.background = '#83E509'
+            } else {
+                campo1.style.background = 'red'
+            }
+
+            if (campoB == F || campoB == f) {
+                campo2.style.background = '#83E509'
+            } else {
+                campo2.style.background = 'red'
+            }
+
+            if (campoC == F || campoC == f) {
+                campo3.style.background = '#83E509'
+            } else {
+                campo3.style.background = 'red'
+            }
+
+            if (campoD == F || campoD == f) {
+                campo4.style.background = '#83E509'
+            } else {
+                campo4.style.background = 'red'
+            }
+        }
+
+        function limpar() {
+            let limpA = document.getElementById('campo1').value = ''
+            let limpB = document.getElementById('campo2').value = ''
+            let limpC = document.getElementById('campo3').value = ''
+            let limpD = document.getElementById('campo4').value = ''
+            if (limpA == 0 || limpB == 0 || limpC == 0 || limpD == 0) {
+                limpA.innerHTML = ''
+                limpB.innerHTML = ''
+                limpC.innerHTML = ''
+                limpD.innerHTML = ''
+                campo1.style.background = ''
+                campo2.style.background = ''
+                campo3.style.background = ''
+                campo4.style.background = ''
+            }
+        }
+    </script>
+</body>
+</html>
